@@ -1,0 +1,40 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<div class="catalog">
+		<h1>Catalog App</h1>
+		{% if user_id != None %}
+	    <div id="logout">
+	        <a href="{{url_for('gdisconnect')}}">
+	            <button class = "logout">Logout</button>
+	        </a>
+	    </div>
+    	{% else %}
+	    <div id="login">
+	        <a href="{{url_for('showLogin')}}">
+	            <button class = "login">Login</button>
+	        </a>
+	    </div>
+		{% endif %}
+	</div>
+
+	<div class="container2">
+		<h1> Delete Item </h1>
+
+	    <h3 class="title_name"> Are you sure you want to delete this Item ?</h3>
+		<form  action='{{url_for('deleteItem' , category_id=category_id , item_id=item_id)}}' method="POST">
+			
+	        <input type="submit" value="Delete" class="design_buttom_del">
+	        <a href="{{ url_for('catMenu') }}">
+            <buttom class="design_buttom_del">Cancel</buttom>
+       		</a>
+       	
+	    </form>
+	</div>
+</body>
+
+</html>
+

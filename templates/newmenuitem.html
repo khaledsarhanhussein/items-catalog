@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<div class="catalog">
+		<h1>Catalog App</h1>
+	    <div id="login">
+	        <a href="{{url_for('showLogin')}}">
+	            <button class = "login">Login</button>
+	        </a>
+	    </div>
+		
+	</div>
+
+	<div class="container2">
+		<h1> New Category Item </h1>
+
+		<form  action="{{ url_for('newMenuItem') }}" method="POST">
+        <h3 style="margin-bottom: 1px;">ItemName:</h3>
+        <input type="text" name="name" style="width:300px;height:35px"/><br>
+        <h3 style="margin-bottom: 1px;">Description:</h3>
+        <textarea style="width:300px;height:55px" name="description"></textarea><br><br>
+
+		<div class="form-group">
+		    <label for="Category">Category:</label>
+		    <select class="form-control" name="category">
+		    
+		        {% for c in itemMenu %}
+		            {% if item and item.category_id == c.id %} 
+		            <option name= "item_category" id="{{c.id}}" value="{{c.id}}" selected>{{c.name}}</option>
+		            {% else %}
+		            <option ame= "item_category" id="{{c.id}}" value="{{c.id}}">{{c.name}}</option>
+		            {% endif %}
+		        {% endfor %}
+		    </select>
+		</div>
+	
+		<input type="submit" value="Add" class="design_buttom_del">
+        <a 
+           href="{{ url_for('catMenu') }}">
+            <buttom class="design_buttom_del">Cancel</buttom>
+        </a>
+	    
+		</form>
+		
+	</div>
+</body>
+</html>

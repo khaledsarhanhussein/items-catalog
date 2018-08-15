@@ -1,0 +1,149 @@
+body {
+    font-family: sans-serif;
+    background-color: #dddddd;
+}
+
+.catalog
+{
+    height: 50px;
+    background-color: #021f40;
+    color: #ffffff;
+    padding:  10px 250px;
+    line-height: 50px;
+}
+.login , .logout 
+{
+    width: 100px;
+    height: 50px;
+    background-color: #e34d07;
+    float: right;
+    margin-top: -50px;
+    border: none;
+    font-family: 'Arial';
+    color: #ffffff;
+    font-size: 23px;
+}
+.container
+{
+    display: flex;
+    width: 700px;
+    height: 400px;
+    background-color: #ffffff;
+    margin: 50px 0px 50px 250px;
+    color: #e34d07;
+    line-height: 15px;
+    padding: 25px 20px;  
+}
+.categories
+{
+    width: 300px;
+    height: 100px;  
+    padding: 10px 10px 10px 50px;  
+}
+.ca { color: #021f40; }
+.iteems
+{
+    width: 300px;
+    height: 100px;  
+    margin-top:  -20px;  
+}
+.newitem
+{
+    font-family: 'Arial';
+    color: #e34d07;
+    font-size: 15px;
+}
+.container1
+{
+    display: flex;
+    width: 700px;
+    height: 200px;
+    background-color: #ffffff;
+    margin: 50px 0px 50px 250px;
+    color: #021f40;
+    line-height: 15px;
+    padding: 55px 30px 30px 30px;
+}
+p
+{
+    line-height: 20px;
+    text-align: justify;
+    letter-spacing: 2px;
+    padding: 10px ; 
+    font-family: 'georgia' ;
+}
+.container2
+{
+    display: block;
+    width: 700px;
+    height: 350px;
+    background-color: #ffffff;
+    margin: 50px 0px 50px 250px;
+    color: #021f40;
+    line-height: 15px;
+    padding: 55px 30px 30px 30px;
+}
+.container2 form 
+{
+    margin: 50px 10px;
+}
+.radio
+{
+    padding: 5px;
+}
+.create
+{
+    margin: 10px 0 0 50px; 
+}
+h1{
+    font-family: 'georgia', serif;
+    margin: 0;
+}
+h4 
+{
+    display: inline;
+    line-height: 35px;
+    font-size: 17px;
+}
+a {
+    text-decoration: none;
+    color: #e34d07;
+    line-height: 35px;
+}
+
+h5 {
+    display: inline;
+    line-height: 35px;
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+dt 
+{
+    margin: 10px;
+}
+dd,
+dt {
+    color: #021f40;
+    
+}
+label 
+{
+    display:inline-block;
+    margin:10px;
+}
+
+.clear{ clear: both; }
+
+
+
+
+.flash {
+    background: #cee5f5;
+}
+.design_buttom_del
+{
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer; 
+}

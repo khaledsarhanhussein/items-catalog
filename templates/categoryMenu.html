@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+<body>
+
+	<div class="catalog">
+		<h1>Catalog App</h1>
+		
+	    <div id="login">
+	        <a href="{{url_for('showLogin')}}">
+	            <button class = "login">Login</button>
+	        </a>
+	    </div>
+	</div>
+
+<div class="container">
+	<div class="categories">
+		<h2 class="ca">Categories</h2>
+		
+			{% for i in cate %}
+			<div>
+				<h4><a href = '{{url_for('itemsMenu', category_id = i.id )}}'> {{i.name}} </a></h4>
+			</div>
+			{% endfor %}
+	</div>
+	<div class="iteems">
+		
+		<h2 class="ca">Latest Items</h2>
+		
+		{% for i in items %}
+		<div>
+			<h4>{{i.name}}</h4>
+
+			{% for j in cate %}
+
+			{% if j.id == i.category_id %}
+				<h5> ( {{j.name}} )</h5>
+			{% endif %}
+			{% endfor %}
+		</div>
+		
+		{% endfor %}
+
+	</div>
+</div>
+
+</body>
+
+</html>
